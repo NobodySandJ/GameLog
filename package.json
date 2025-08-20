@@ -1,0 +1,28 @@
+{
+  "name": "gamelog",
+  "version": "1.0.0",
+  "description": "A personal desktop game library application.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^31.0.1",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.gamelog.app",
+    "productName": "GameLog",
+    "win": {
+      "target": "nsis"
+    },
+    "files": [
+      "**/*",
+      "!node_modules/**/*"
+    ]
+  }
+}

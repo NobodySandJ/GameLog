@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tambah Game Baru</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { padding: 20px; }
+        .form-container { background-color: #16213e; padding: 30px; border-radius: 8px; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; color: #a0a0a0; }
+        .form-group input, .form-group select { width: 100%; padding: 10px; box-sizing: border-box; }
+        .rating-stars { display: flex; flex-direction: row-reverse; justify-content: flex-end; padding: 10px 0; }
+        .rating-stars input { display: none; }
+        .rating-stars label { font-size: 2rem; color: #555; cursor: pointer; padding: 0 5px; }
+        .rating-stars input:checked ~ label, .rating-stars:hover label:hover ~ label, .rating-stars label:hover { color: #e94560; }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Tambah Game Baru</h1>
+        <form id="add-game-form">
+            <div class="form-group">
+                <label for="title">Judul Game</label>
+                <input type="text" id="title" required>
+            </div>
+            <div class="form-group">
+                <label for="platform">Platform</label>
+                <select id="platform">
+                    <option>Steam</option>
+                    <option>Epic Games</option>
+                    <option>GOG</option>
+                    <option>Ubisoft Connect</option>
+                    <option>EA App</option>
+                    <option>Lainnya</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="playtime">Playtime (jam)</label>
+                <input type="number" id="playtime" value="0" required>
+            </div>
+            <div class="form-group">
+                <label for="purchasePrice">Harga Beli (Rp)</label>
+                <input type="number" id="purchasePrice" value="0" required>
+            </div>
+             <div class="form-group">
+                <label for="microtransaction">Microtransaction (Rp)</label>
+                <input type="number" id="microtransaction" value="0" required>
+            </div>
+            <div class="form-group">
+                <label>Rating</label>
+                <div class="rating-stars">
+                    <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+                    <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+                    <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+                    <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+                    <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="coverImage">Cover Image</label>
+                <input type="file" id="coverImage" accept="image/*" required>
+            </div>
+            <button type="submit" class="btn-primary">Simpan Game</button>
+        </form>
+    </div>
+    <script src="addRenderer.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Library Pribadi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>GameLog 🎮</h1>
+            <div class="controls">
+                <div class="filter-group">
+                    <label for="platform-filter">Filter by Platform:</label>
+                    <select id="platform-filter">
+                        <option value="all">Semua</option>
+                        <option value="Steam">Steam</option>
+                        <option value="Epic Games">Epic Games</option>
+                        <option value="GOG">GOG</option>
+                        <option value="Ubisoft Connect">Ubisoft Connect</option>
+                        <option value="EA App">EA App</option>
+                        <option value="Lainnya">Lainnya</option>
+                    </select>
+                </div>
+                <button id="add-game-btn" class="btn-primary">＋ Tambah Game Baru</button>
+            </div>
+        </header>
+
+        <main id="game-list">
+            </main>
+
+        <section class="statistics">
+            <h2>Statistik Hidup</h2>
+            <div class="stats-container">
+                <div class="stat-item">
+                    <h4>Total Waktu Bermain</h4>
+                    <p id="total-playtime">0 jam</p>
+                </div>
+                <div class="stat-item">
+                    <h4>Total Harga Beli</h4>
+                    <p id="total-purchase">Rp 0</p>
+                </div>
+                <div class="stat-item">
+                    <h4>Total Microtransaction</h4>
+                    <p id="total-microtransaction">Rp 0</p>
+                </div>
+                <div class="stat-item total-spent">
+                    <h4>Total Uang Dihabiskan</h4>
+                    <p id="total-spent">Rp 0</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>

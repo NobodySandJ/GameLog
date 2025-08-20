@@ -1,0 +1,209 @@
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Reset dasar dan Tema Gelap Modern (Biru & Oranye) */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212; /* Latar belakang netral sangat gelap */
+    color: #E9E9E9;            /* Teks terang untuk keterbacaan */
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #282828; /* Border abu-abu gelap */
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: #0046FF; /* Biru terang sebagai aksen utama */
+    margin: 0;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.filter-group label {
+    margin-right: 8px;
+    color: #A9A9A9; /* Teks sekunder */
+}
+
+select, input {
+    background-color: #282828; /* Background elemen sedikit lebih terang */
+    color: #E9E9E9;
+    border: 1px solid #333;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: #0046FF; /* Biru terang sebagai aksen utama */
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0038cc;
+}
+
+/* Daftar Game */
+#game-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.game-card {
+    background-color: #1E1E1E; /* Background elemen sedikit lebih terang */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.game-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.game-card .game-info {
+    padding: 15px;
+}
+
+.game-card h3 {
+    margin: 0 0 10px 0;
+    color: #E9E9E9;
+}
+
+.game-card p {
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: #A9A9A9; /* Teks sekunder */
+}
+
+/* Statistik */
+.statistics {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #1E1E1E; /* Background elemen sedikit lebih terang */
+    border-radius: 8px;
+}
+
+.statistics h2 {
+    margin-top: 0;
+    color: #0046FF; /* Biru terang sebagai aksen utama */
+    border-bottom: 1px solid #282828;
+    padding-bottom: 10px;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-item h4 {
+    margin: 0 0 5px 0;
+    color: #A9A9A9;
+    font-weight: 400;
+}
+
+.stat-item p {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #E9E9E9;
+}
+
+.stat-item.total-spent p {
+    color: #FF8040; /* Oranye sebagai aksen sekunder/penting */
+}
+
+/* Styling untuk form */
+.form-container {
+    background-color: #1E1E1E;
+    padding: 30px;
+    border-radius: 8px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #A9A9A9;
+}
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.rating-stars {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    padding: 10px 0;
+}
+.rating-stars input {
+    display: none;
+}
+.rating-stars label {
+    font-size: 2rem;
+    color: #444; /* Bintang non-aktif */
+    cursor: pointer;
+    padding: 0 5px;
+}
+.rating-stars input:checked ~ label,
+.rating-stars:hover label:hover ~ label,
+.rating-stars label:hover {
+    color: #0046FF; /* Biru terang sebagai aksen utama */
+}
+
+/* Styling untuk tombol delete dan grup tombol */
+.btn-danger {
+    background-color: #FF8040; /* Oranye sebagai aksen sekunder/penting */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+.btn-danger:hover {
+    background-color: #e66a2a;
+}
+.form-buttons {
+    display: flex;
+    gap: 10px;
+}
